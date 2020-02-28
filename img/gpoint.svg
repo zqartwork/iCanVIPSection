@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_16" data-name="Ellipse 16" cx="12" cy="12" r="12" transform="translate(0 -0.333)" fill="#ac9453"/>
+    </clipPath>
+  </defs>
+  <g id="gpoint" transform="translate(0 0.333)">
+    <rect id="Rectangle_54" data-name="Rectangle 54" width="24" height="24" transform="translate(0 -0.333)" fill="rgba(255,255,255,0)"/>
+    <g id="Mask_Group_5" data-name="Mask Group 5" clip-path="url(#clip-path)">
+      <path id="google-brands" d="M23.613,12.668c0,6.847-4.689,11.719-11.613,11.719a12,12,0,1,1,0-24,11.54,11.54,0,0,1,8.047,3.14,2.371,2.371,0,0,1,0,3.14c-1.416,1.453-3.266,0-3.266,0C12.508,2.545,4.563,5.642,4.563,12.387A7.517,7.517,0,0,0,12,19.965c4.752,0,6.532-3.406,6.813-5.173H16s-2.162-.077-2.162-2.108S16,10.665,16,10.665h7.424a10.52,10.52,0,0,1,.189,2Z" transform="translate(0.194 0.141)" fill="#ac9453"/>
+    </g>
+  </g>
+</svg>

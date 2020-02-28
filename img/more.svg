@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="more" transform="translate(-910 -3146)">
+    <path id="chevron-circle-down-solid" d="M65.9,36.949A28.949,28.949,0,1,1,36.949,8,28.944,28.944,0,0,1,65.9,36.949Zm-26.964,13.3L54.75,34.427a2.79,2.79,0,0,0,0-3.957l-1.984-1.984a2.79,2.79,0,0,0-3.957,0l-11.86,11.86-11.86-11.86a2.79,2.79,0,0,0-3.957,0L19.148,30.47a2.79,2.79,0,0,0,0,3.957L34.964,50.244A2.8,2.8,0,0,0,38.933,50.244Z" transform="translate(923.051 3159.052)" fill="#999"/>
+    <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(910 3146)" fill="none" stroke="#999" stroke-width="2">
+      <circle cx="50" cy="50" r="50" stroke="none"/>
+      <circle cx="50" cy="50" r="49" fill="none"/>
+    </g>
+  </g>
+</svg>

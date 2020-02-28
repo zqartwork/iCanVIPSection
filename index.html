@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>艾肯娛樂VIP專區</title>
+    <!--google plus info-->
+    <meta itemprop="name" content="艾肯娛樂VIP專區">
+    <meta itemprop="image" content="http://event.icantw.com/ck/event/20200214_VIP_section/img/1200x628.jpg">
+    <meta name="description" content="【艾肯娛樂邀請您成為我們的VIP】我們將提供更多專屬優惠及貼心服務，讓VIP享受更特別的禮遇。" />
+    <!--FB info-->
+    <meta property="og:title" content="艾肯娛樂VIP專區" />
+    <meta property="og:site_name" content="iCan艾肯娛樂" />
+    <meta property="og:url" content="http://event.icantw.com/ck/event/20200214_VIP_section/index.html">
+    <meta property="og:image" content="http://event.icantw.com/ck/event/20200214_VIP_section/img/1200x628.jpg">
+    <meta property="og:description" content="【艾肯娛樂邀請您成為我們的VIP】我們將提供更多專屬優惠及貼心服務，讓VIP享受更特別的禮遇。">
+    <meta property="og:type" content="website" />
+    <!--Icon-->
+    <link rel="icon" href="//www.icantw.com/favicon.ico" type="image/x-icon" />
+    <!--CSS-->
+    <link rel="stylesheet" href="//event.icantw.com/art/css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
+</head>
+
+<body>
+    <div id="app">
+        <a href="#top" id="gotop">
+            <img src="img/gotop.svg" alt="">
+        </a>
+        <header>
+            <div class="container">
+                <div class="logo-link-wrapper">
+                    <div class="r-links-ham" id="Opener" @click="addShow">
+                        <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                            <path
+                                  class="line top"
+                                  d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                            <path
+                                  class="line middle"
+                                  d="m 30,50 h 40" />
+                            <path
+                                  class="line bottom"
+                                  d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                          </svg>
+                    </div>
+                    <a href="http://www.icantw.com/" class="logo wow fadeInLeft" target="_blank">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                    <div class="r-links wow fadeInRight">
+                        <a href="#!" class="link active"><span>首頁</span></a>
+                        <a href="#Act" class="link"><span>福利內容</span></a>
+                        <a href="#Feature" class="link"><span>精彩活動</span></a>
+                        <a href="http://www.icantw.com/event/VipNormalGivingBack/index.html" class=" link charge-panel" target="_blank">
+                            <div class="ic-wrap">
+                                <img src="img/coin_sm.svg" alt="" class="coin">
+                                <span>儲值優惠</span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <div class="mmenu">
+            <div class="exit-mask" @click="removeActive"></div>
+            <div class="user-panel">
+                <div class="bind-charge">
+                    <!-- Before -->
+                    <div class="panel-container" id="login" v-show="!isLogin">
+                        <div class="panel-wrapper">
+                            <div class="ava">
+                                <img src="img/user.svg" alt="">
+                            </div>
+                            <a href="#!" class="">
+                                <div class="login_btn" @click="isLogin = !isLogin">
+                                    <span>VIP會員登入</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- After -->
+                    <div class="panel-container" id="logout" v-show="isLogin">
+                        <div class="panel-wrapper">
+                            <div class="p-head">
+                                <div class="ava">
+                                    <img src="img/user.svg" alt="">
+                                </div>
+                                <div class="name">
+                                    <span>使用者名稱使用者名稱使用者名稱使用者名稱</span>
+                                    <span class="time">VIP期效：9999/09/09-99:99</span>
+                                </div>
+                            </div>
+                            <div class="p-body">
+                                <div class="user-item">
+                                    <div class="ic-wrap">
+                                        <img src="img/mail.svg" alt="">
+                                        <span>尚未認證</span>
+                                    </div>
+                                </div>
+                                <div class="user-item">
+                                    <div class="ic-wrap">
+                                        <img src="img/phone.svg" alt="">
+                                        <span>尚未認證</span>
+                                    </div>
+                                </div>
+                                <div class="user-item">
+                                    <div class="ic-wrap">
+                                        <img src="img/user.svg" alt="" height="24">
+                                        <span>尚未認證</span>
+                                    </div>
+                                </div>
+                                <div class="user-item">
+                                    <div class="ic-wrap">
+                                        <div class="dot">99+</div>
+                                        <i class="fas fa-inbox"></i>
+                                        <span>VIP信箱</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="r-links">
+                <a href="http://www.icantw.com/event/VipNormalGivingBack/index.html" target="_blank" class="link charge-panel" @click="removeActive">
+                    <div class="ic-wrap">
+                        <img src="img/coin_sm.svg" alt="" class="coin">
+                        <span>儲值優惠</span>
+                    </div>
+                </a>
+                <a href="#!" class="link active" @click="removeActive"><span>首頁</span></a>
+                <a href="#Act" class="link" @click="removeActive"><span>福利內容</span></a>
+                <a href="#Feature" class="link" @click="removeActive"><span>精彩活動</span></a>
+                <a href="#!" class="logout" @click="isLogin = !isLogin" v-if="isLogin">
+                    <div class="ic-wrap">
+                        <img src="img/logout.svg" alt="">
+                        <span>登出</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <section id="Stage">
+            <div class="container wow fadeInUp">
+                <div class="slogan-wrapper">
+                    <div class="slogan">
+                        <img src="img/slogan.png" alt="" class='glow'>
+                    </div>
+                </div>
+                <div class="describtion">
+                    <p>
+                        感謝您的支持，針對符合VIP資格會員，提供一系列優質服務與活動，讓您感受到我們的重視與關懷。
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="Banner">
+            <div class="container wow fadeInUp">
+                <div class="bn-wrapper">
+                    <div class="bn-carousel owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="img/001.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="img/001.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="img/001.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="img/001.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="img/001.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="user-panel">
+                        <div class="bind-charge">
+                            <!-- Before -->
+                            <div class="panel-container" id="login" v-show="!isLogin">
+                                <div class="panel-wrapper">
+                                    <div class="ava">
+                                        <img src="img/user.svg" alt="">
+                                    </div>
+                                    <a href="#!" class="">
+                                        <div class="login_btn" @click="isLogin = !isLogin">
+                                            <span>VIP會員登入</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- After -->
+                            <div class="panel-container" id="logout" v-show="isLogin">
+                                <div class="panel-wrapper">
+                                    <a href="#!" class="logout" @click="isLogin = !isLogin">
+                                        <div class="ic-wrap">
+                                            <img src="img/logout.svg" alt="">
+                                            <span>登出</span>
+                                        </div>
+                                    </a>
+                                    <div class="p-head">
+                                        <div class="ava">
+                                            <img src="img/user.svg" alt="">
+                                        </div>
+                                        <div class="name">
+                                            <span>使用者名稱使用者名稱使用者名稱使用者名稱</span>
+                                            <span class="time">VIP期效：9999/09/09-99:99</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-body">
+                                        <a href="#!" class="user-item">
+                                            <div class="ic-wrap">
+                                                <img src="img/mail.svg" alt="">
+                                                <span>尚未認證</span>
+                                            </div>
+                                        </a>
+                                        <a href="#!" class="user-item">
+                                            <div class="ic-wrap">
+                                                <img src="img/phone.svg" alt="">
+                                                <span>尚未認證</span>
+                                            </div>
+                                        </a>
+                                        <a href="#!" class="user-item">
+                                            <div class="ic-wrap">
+                                                <img src="img/user.svg" alt="" height="24">
+                                                <span>尚未認證</span>
+                                            </div>
+                                        </a>
+                                        <a href="#!" class="user-item">
+                                            <div class="ic-wrap">
+                                                <div class="dot">99+</div>
+                                                <i class="fas fa-inbox"></i>
+                                                <span>VIP信箱</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Act">
+            <div class="container">
+                <div class="list-wrapper wow fadeInUp">
+                    <div v-for="act in acts" class="list-item">
+                        <div class="status" v-if="act.status == '敬請期待'">{{act.status}}</div>
+                        <a href="#!" class="for"></a>
+                        <div class="item-head">
+                            <div class="act-icon">
+                                <img :src="act.img" alt="">
+                            </div>
+                            <div class="act-title">
+                                <div class="m">{{act.title}}</div>
+                                <div class="s">{{act.subTitle}}</div>
+                            </div>
+                            <a href="#!" class="act-btn">
+                                    {{act.btn}}
+                            </a>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="item-body">
+                            <p>
+                                {{act.content}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Feature">
+            <div class="container">
+                <div class="ft-wrapper">
+                    <div class="section-title wow fadeInUp">
+                        精選活動
+                    </div>
+                    <div class="ft-list-wrapper wow fadeInUp">
+                        <div class="ft-list-item" v-for="ft in fts" :key="ft.index" :class="ft.show">
+                            <div class="inner-wrapper">
+                                <div class="ft-head">
+                                    <div class="ft-img">
+                                        <img :src="ft.img" alt="">
+                                    </div>
+                                </div>
+                                <div class="ft-body">
+                                    <div class="title">{{ft.title}}</div>
+                                    <div class="content">{{ft.content}}</div>
+                                </div>
+                                <div class="ft-foot">
+                                    <a href="#!" class="ft-btn">
+                                        VIP會員登入
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="load-more" id="more" v-if="moreShow" @click="showFts">
+                        <img src="img/more.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="footer-links wow fadeInLeft">
+                    <ul>
+                        <a href="http://www.ican.com.tw/index_home.html" class="f-link" target="_blank">
+                            <li>關於我們 About iCan</li>
+                        </a>
+                        <a href="http://www.icantw.com/services" class="f-link" target="_blank">
+                            <li>服務條款 Terms of Service</li>
+                        </a>
+                        <a href="http://www.icantw.com/cooperate" class="f-link" target="_blank">
+                            <li>異業合作 Contact Us</li>
+                        </a>
+                        <a href="https://www.104.com.tw/company/1a2x6biki1?jobsource=n104bank1" class="f-link" target="_blank">
+                            <li>艾肯徵才 Careers</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="divider wow fadeInUp"></div>
+                <div class="copyright  wow fadeInRight">
+                    <p>@iCan Entertainment Co.,Ltd. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--script-->
+    <script src="//event.icantw.com/art/js/jquery-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="//event.icantw.com/art/js/awesome/awesome.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@2.4.3/dist/simplebar.min.js"></script>
+    <script src="//event.icantw.com/art/js/wow/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                isLogin: true,
+                acts: [{
+                    title: '每日簽到',
+                    status: '敬請期待',
+                    subTitle: 'Check in',
+                    btn: '前往簽到',
+                    img: 'img/calendar.svg',
+                    content: '1天領取1點，每月累積滿點，即可獲得免費參與專屬活動機會。',
+                }, {
+                    title: '獨享福利',
+                    status: ' ',
+                    subTitle: 'Welfare',
+                    btn: '取得福利',
+                    img: 'img/gift.svg',
+                    content: '各種節慶禮包、特殊紀念日專屬禮，以及會員福利，只有重要的您值得擁有。',
+                }, {
+                    title: '專人服務',
+                    status: '敬請期待',
+                    subTitle: 'Vip Line',
+                    btn: '尋找服務',
+                    img: 'img/service.svg',
+                    content: 'VIP獨享即時又便利的服務，及不定期的好康活動通知。',
+                }, {
+                    title: '權益與條款',
+                    status: ' ',
+                    subTitle: 'Rights / Terms',
+                    btn: '了解更多',
+                    img: 'img/vip.svg',
+                    content: '只要符合艾肯娛樂VIP條件玩家，可享有與眾不同的專屬待遇。',
+                }, {
+                    title: '常見問題',
+                    status: '敬請期待',
+                    subTitle: 'Common problem',
+                    btn: '了解更多',
+                    img: 'img/qa.svg',
+                    content: '有任何疑難雜症，快速解決問題。',
+                }, {
+                    title: '問卷填寫',
+                    status: '敬請期待',
+                    subTitle: 'Questionnaire',
+                    btn: '填寫問券',
+                    img: 'img/qn.svg',
+                    content: '我們重視您每一個小細節，填寫問卷領取精緻好禮，讓彼此更熟悉，規劃更符合您的活動。',
+                }, ],
+                fts: [{
+                    img: 'img/002.jpg',
+                    title: '專屬活動',
+                    content: '享有不定期專屬活動及折扣優惠、獨享好禮等，更有機會體驗新遊戲。',
+                    show: 'show',
+                }, {
+                    img: 'img/003.jpg',
+                    title: 'VIP專訪專頁',
+                    content: ' 除了經典熱銷遊戲外，艾肯娛樂也訪問了多位深藏不露的高手玩家，快來認識同好。',
+                    show: 'show',
+                }, {
+                    img: 'img/004.jpg',
+                    title: '專屬活動',
+                    content: '享有不定期專屬活動及折扣優惠、獨享好禮等，更有機會體驗新遊戲。',
+                    show: 'show',
+                }, {
+                    img: 'img/002.jpg',
+                    title: '專屬活動',
+                    content: '享有不定期專屬活動及折扣優惠、獨享好禮等，更有機會體驗新遊戲。',
+                    show: 'hide',
+                }, {
+                    img: 'img/003.jpg',
+                    title: 'VIP專訪專頁',
+                    content: ' 除了經典熱銷遊戲外，艾肯娛樂也訪問了多位深藏不露的高手玩家，快來認識同好。',
+                    show: 'hide',
+                }, {
+                    img: 'img/004.jpg',
+                    title: '專屬活動',
+                    content: '享有不定期專屬活動及折扣優惠、獨享好禮等，更有機會體驗新遊戲。',
+                    show: 'hide',
+                }, ],
+                moreShow: true,
+                startPoint: 3,
+            },
+            methods: {
+                showFts() {
+                    $('.hide').slideDown().css({
+                        display: 'inline-block',
+                    });
+                    $('#more').fadeOut();
+                },
+                addShow() {
+                    $('.mmenu, .r-links-ham').toggleClass('show');
+                },
+                removeActive() {
+                    $('.ham').attr('class', 'ham ham1 hamRotate')
+                    $('.mmenu, .r-links-ham').removeClass('show');
+                }
+            },
+            // mounted() {
+            //     console.log(this.fts.length);
+            //     let self = this;
+            //     setTimeout(function() {
+            //         if (self.fts.length > 3) {
+            //             let last = self.fts.length
+            //             self.moreShow = true;
+            //             let hidden = self.fts.slice(3, last);
+            //             console.log(hidden.length);
+            //             for (let i = 0; i < self.fts.slice(3, last).length; i++) {
+            //                 self.fts[i + 3].show = 'hidden'
+            //             }
+            //         }
+            //     }, 100)
+            // },
+        });
+        new WOW().init();
+        // var main = document.getElementById('main');
+        // var rc = document.getElementById('rc');
+        // var suc = document.getElementById('suc');
+        // new SimpleBar(main, {
+        //     autoHide: true
+        // });
+        // new SimpleBar(rc, {
+        //     autoHide: true
+        // });
+        // new SimpleBar(suc, {
+        //     autoHide: true
+        // });
+    </script>
+    <script src="js/custom.js"></script>
+
+    <!-- ========login box ==========-->
+    <script src="http://static.icantw.com/common/js/poplogin_v4.js"></script>
+    <script type="text/javascript">
+        $(".login_btn").click(function() {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 800);
+            showLoginWin();
+        });
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                autoHeight: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
